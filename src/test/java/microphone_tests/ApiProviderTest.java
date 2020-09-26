@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ApiProviderTest {
-    final String url = "127.0.0.1:8080//users";
+    final String url = "https://voiptipchat.herokuapp.com//users";
     private RestTemplate restTemplate = new RestTemplate();
 
     @Before
@@ -38,7 +38,7 @@ public class ApiProviderTest {
         messageConverters.add(converter);
         restTemplate.setMessageConverters(messageConverters);
 
-        String url = "127.0.0.1:8080/users/register";
+        String url = "https://voiptipchat.herokuapp.com/users/register";
 
 
         RegistrationForm registerForm = RegistrationForm

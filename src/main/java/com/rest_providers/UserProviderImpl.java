@@ -14,7 +14,7 @@ import java.util.List;
 
 @Component
 public class UserProviderImpl {
-    final String url = "127.0.0.1:8080/users";
+    final String url = "https://voiptipchat.herokuapp.com/users";
     private final RestTemplate restTemplate = RestTemplateConfiguration.restTemplate();
 
     public List<UserShortTO> getFavourites(String token) {
