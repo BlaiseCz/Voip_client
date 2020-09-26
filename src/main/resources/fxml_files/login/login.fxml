@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import java.net.URL?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="mainPane" prefHeight="800.0" prefWidth="800.0"
-            xmlns="http://javafx.com/javafx/8" fx:controller="com.gui.components.LoginController">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.components.LoginController">
     <children>
-        <TextField fx:id="usernameTF" layoutX="220.0" layoutY="118.0" promptText="Username"
-                   AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0"/>
-        <PasswordField fx:id="passwordTF" layoutX="220.0" layoutY="223.0" promptText="Password"
-                       AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0"/>
-        <Button fx:id="loginBtn" layoutX="262.0" layoutY="305.0" mnemonicParsing="false" onAction="#login" text="Login"
-                AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="200.0"/>
-        <Button fx:id="registerBtn" layoutX="200.0" layoutY="449.0" mnemonicParsing="false" onAction="#register"
-                text="Register" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="200.0"
-                AnchorPane.rightAnchor="480.0"/>
-        <CheckBox fx:id="rememberMeCB" layoutX="200.0" layoutY="718.0" mnemonicParsing="false" text="Remember me"
-                  AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="200.0"/>
+        <TextField fx:id="usernameTF" layoutX="200.0" layoutY="369.0" promptText="Username" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+        <PasswordField fx:id="passwordTF" layoutX="200.0" layoutY="406.0" promptText="Password" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+        <Button fx:id="loginBtn" layoutX="200.0" layoutY="444.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="400.0" text="Sign in" AnchorPane.bottomAnchor="325.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+        <Button fx:id="registerBtn" layoutX="200.0" layoutY="640.0" mnemonicParsing="false" onAction="#register" prefHeight="31.0" prefWidth="400.0" text="Sign up" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+        <CheckBox fx:id="rememberMeCB" layoutX="474.0" layoutY="487.0" mnemonicParsing="false" text="Remember me" AnchorPane.bottomAnchor="292.0" AnchorPane.rightAnchor="200.0" />
+      <Text layoutX="200.0" layoutY="628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account already?" textAlignment="CENTER" wrappingWidth="400.0" />
+      <Text layoutX="200.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIP - voice chat" textAlignment="CENTER" wrappingWidth="400.0">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Text>
     </children>
     <stylesheets>
-        <URL value="@login.css"/>
+        <URL value="@login.css" />
     </stylesheets>
 </AnchorPane>
