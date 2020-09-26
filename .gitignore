@@ -1,5 +1,7 @@
 .idea/*
 reddit/*
+target
+*.iml
 
 ./out/*
 *.aux
