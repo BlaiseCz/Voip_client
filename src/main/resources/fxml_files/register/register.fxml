@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="mainPane" prefHeight="800.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/8" fx:controller="com.gui.components.RegisterController">
+    <children>
+        <TextField fx:id="usernameTF" layoutX="220.0" layoutY="118.0" maxHeight="30.0" maxWidth="200.0" minHeight="30.0"
+                   minWidth="200.0" prefHeight="30.0" prefWidth="200.0" promptText="Username"
+                   AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0"/>
+        <TextField fx:id="emailTF" layoutX="200.0" layoutY="147.0" promptText="E-mail" AnchorPane.bottomAnchor="200.0"
+                   AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0"/>
+        <PasswordField fx:id="passwordTF" layoutX="220.0" layoutY="223.0" promptText="Password"
+                       AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0"/>
+        <Button fx:id="registerBtn" layoutX="262.0" layoutY="305.0" mnemonicParsing="false" onAction="#register"
+                text="Register" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="330.0"
+                AnchorPane.rightAnchor="200.0"/>
+        <Button fx:id="loginBtn" layoutX="153.0" layoutY="600.0" mnemonicParsing="false" onAction="#login" text="Login"
+                AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="480.0"/>
+    </children>
+    <stylesheets>
+        <URL value="@register.css"/>
+    </stylesheets>
+</AnchorPane>

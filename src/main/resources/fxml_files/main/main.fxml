@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="mainBackground" xmlns="http://javafx.com/javafx/8"
+            fx:controller="com.gui.components.MainController">
+    <children>
+        <VBox fx:id="loginPane" alignment="BOTTOM_CENTER" visible="false" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <fx:include fx:id="login" source="../login/login.fxml"/>
+            </children>
+        </VBox>
+
+        <VBox fx:id="registerPane" alignment="BOTTOM_CENTER" visible="false" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <fx:include fx:id="register" source="../register/register.fxml"/>
+            </children>
+        </VBox>
+
+        <VBox fx:id="callPane" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="30.0">
+            <children>
+                <fx:include fx:id="callPage" source="../call_page/call_page.fxml"/>
+            </children>
+        </VBox>
+        <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Preferences">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#chooseServer" text="Choose server"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout"/>
+                        <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Quit"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+    <stylesheets>
+        <URL value="@main.css"/>
+    </stylesheets>
+</AnchorPane>

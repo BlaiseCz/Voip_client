@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="com.gui.components.CallPageController">
+    <children>
+        <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0"
+                   prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+            <items>
+                <AnchorPane>
+                    <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0"
+                               style="&#10;" text="Users" textAlignment="CENTER" wrapText="false">
+                            <font>
+                                <Font size="18.0" fx:id="x1"/>
+                            </font>
+                            <textFill>
+                                <Color blue="0.624" green="0.624" red="0.624" fx:id="x2"/>
+                            </textFill>
+                        </Label>
+                        <TableView fx:id="usersTable" layoutX="-17.0" layoutY="47.0" onKeyReleased="#updateSelectedUser"
+                                   onMouseClicked="#updateSelectedUser" pickOnBounds="false" prefHeight="200.0"
+                                   prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                            <columns>
+                                <TableColumn fx:id="statusColumn" editable="false" maxWidth="75.0" minWidth="50.0"
+                                             prefWidth="50.0" text="Active"/>
+                                <TableColumn fx:id="usernameColumn" editable="false" prefWidth="75.0" text="Username"/>
+                                <!--                                <TableColumn fx:id="favouriteColumn" editable="false" maxWidth="75.0" minWidth="50.0"-->
+                                <!--                                             prefWidth="50.0" text="Favourite"/>-->
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                        </TableView>
+          </children>
+        </AnchorPane>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
+                <children>
+                    <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Call"
+                           textAlignment="CENTER" textFill="$x2" wrapText="false"/>
+                    <Button fx:id="callBtn" layoutX="65.0" layoutY="704.0" minHeight="80.0" minWidth="80.0"
+                            mnemonicParsing="false" onAction="#call" text="Call" AnchorPane.bottomAnchor="50.0"
+                            AnchorPane.leftAnchor="50.0"/>
+                    <Button fx:id="muteBtn" layoutX="142.0" layoutY="704.0" minHeight="80.0" minWidth="80.0"
+                            mnemonicParsing="false" onAction="#mute" text="Mute" AnchorPane.bottomAnchor="50.0"
+                            AnchorPane.leftAnchor="150.0"/>
+                    <Button fx:id="disconnectBtn" layoutX="240.0" layoutY="668.0" minHeight="80.0" minWidth="80.0"
+                            mnemonicParsing="false" onAction="#disconnect" text="Disconnect"
+                            AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="250.0"/>
+                    <Label layoutX="23.0" layoutY="105.0" text="Selected User:" AnchorPane.leftAnchor="10.0"
+                           AnchorPane.topAnchor="100.0"/>
+                    <Label fx:id="selectedUserLbl" layoutX="75.0" layoutY="147.0" text="-----"
+                           AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="120.0"/>
+                    <Label layoutX="169.0" layoutY="100.0" text="User IP:"/>
+                    <Label fx:id="userIpLbl" layoutX="169.0" layoutY="120.0" text="-----"/>
+                    <CheckBox fx:id="favouriteCheckBox" layoutX="266.0" layoutY="110.0" mnemonicParsing="false"
+                              onAction="#favouriteChanged" text="Favourite"/>
+                </children>
+            </AnchorPane>
+        <AnchorPane>
+            <children>
+                <Label alignment="CENTER" disable="true" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;"
+                       text="History" textAlignment="CENTER" textFill="$x2" wrapText="false"/>
+                <TableView fx:id="historyTable" layoutX="-1.0" layoutY="53.0" pickOnBounds="false" prefHeight="748.0"
+                           prefWidth="248.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                    <columns>
+                        <TableColumn fx:id="startedHistoryCol" editable="false" prefWidth="65.0" sortable="false"
+                                     text="Began"/>
+                        <!--                        <TableColumn fx:id="endedHistoryCol" editable="false" prefWidth="65.0" sortable="false"-->
+                        <!--                                     text="Ended"/>-->
+                        <TableColumn fx:id="participantsHistoryCol" editable="false" prefWidth="130.0" sortable="false"
+                                     text="Participants"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+                <Button fx:id="getHistoryBtn" layoutX="116.0" layoutY="15.0" mnemonicParsing="false"
+                        onAction="#refreshHistory" text="Get History"/>
+            </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+  <stylesheets>
+    <URL value="@call_page.css" />
+  </stylesheets>
+</AnchorPane>
