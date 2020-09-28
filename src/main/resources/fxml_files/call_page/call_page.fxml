@@ -34,7 +34,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                    <Button fx:id="disconnectBtn" graphicTextGap="0.0" layoutX="390.0" layoutY="708.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#disconnect" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="390.0">
+                    <Button fx:id="disconnectBtn" graphicTextGap="0.0" layoutX="702.0" layoutY="708.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#disconnect" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="702.0">
                      <graphic>
                         <ImageView id="disconnectBtn" fitHeight="58.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -46,13 +46,13 @@
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                    <Label fx:id="selectedUserLbl" layoutX="15.0" layoutY="603.0" text="-----" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="603.0" />
+                    <Label fx:id="selectedUserLbl" layoutX="15.0" layoutY="603.0" text="-" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="603.0" />
                     <Label layoutX="183.0" layoutY="573.0" text="User IP:">
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                    <Label fx:id="userIpLbl" layoutX="183.0" layoutY="603.0" text="-----" />
-                        <TableView fx:id="usersTable" layoutX="13.0" layoutY="57.0" onKeyReleased="#updateSelectedUser" onMouseClicked="#updateSelectedUser" pickOnBounds="false" prefHeight="506.0" prefWidth="457.0" AnchorPane.bottomAnchor="235.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="328.0" AnchorPane.topAnchor="57.0">
+                    <Label fx:id="userIpLbl" layoutX="183.0" layoutY="603.0" text="-" />
+                        <TableView fx:id="usersTable" layoutX="13.0" layoutY="57.0" onKeyReleased="#updateSelectedUser" onMouseClicked="#updateSelectedUser" pickOnBounds="false" prefHeight="506.0" prefWidth="769.0" AnchorPane.bottomAnchor="235.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="57.0">
                             <columns>
                                 <TableColumn fx:id="usernameColumn" editable="false" prefWidth="474.0" text="Nickname" />
                                 <TableColumn fx:id="statusColumn" editable="false" maxWidth="325.0" minWidth="47.0" prefWidth="91.0" text="Online" />
@@ -63,26 +63,11 @@
                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                             </columnResizePolicy>
                         </TableView>
-                <TableView fx:id="historyTable" layoutX="483.0" layoutY="57.0" pickOnBounds="false" prefHeight="731.0" prefWidth="302.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="483.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="57.0">
-                    <columns>
-                        <TableColumn fx:id="startedHistoryCol" editable="false" prefWidth="179.0" sortable="false" text="Date" />
-                        <!--                        <TableColumn fx:id="endedHistoryCol" editable="false" prefWidth="65.0" sortable="false"-->
-                        <!--                                     text="Ended"/>-->
-                        <TableColumn fx:id="participantsHistoryCol" editable="false" prefWidth="115.0" sortable="false" text="Users" />
-                    </columns>
-                    <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                    </columnResizePolicy>
-                </TableView>
                         <Label alignment="CENTER" layoutX="14.0" layoutY="21.0" minWidth="60.0" prefHeight="36.0" prefWidth="66.0" style="&#10;" text="Users" wrapText="false">
                             <font>
                                 <Font size="25.0" fx:id="x1" />
                             </font>
                         </Label>
-                <Label alignment="CENTER" disable="true" layoutX="660.0" layoutY="21.0" prefHeight="36.0" prefWidth="125.0" style="&#10;" text="Call history" wrapText="false">
-                     <font>
-                        <Font size="25.0" fx:id="x2" />
-                     </font></Label>
                 </children>
             </AnchorPane>
       </items>

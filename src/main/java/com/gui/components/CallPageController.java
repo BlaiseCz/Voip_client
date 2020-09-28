@@ -126,18 +126,18 @@ public class CallPageController {
 
     private void initHistory() {
 //        endedHistoryCol.setCellValueFactory(new PropertyValueFactory<>("ended"));
-        startedHistoryCol.setCellValueFactory(new PropertyValueFactory<>("began"));
-        participantsHistoryCol.setCellValueFactory(new PropertyValueFactory<>("participants"));
+        //startedHistoryCol.setCellValueFactory(new PropertyValueFactory<>("began"));
+        //participantsHistoryCol.setCellValueFactory(new PropertyValueFactory<>("participants"));
     }
 
     public void refreshHistory() {
-        ObservableList<HistoryDisplayData> history = FXCollections.observableList(
-                ConversationProvider.getHistory(
-                        MainController.getUserMe().getUserID(),
-                        mainController.getTokenService().getToken())
-        );
+        //ObservableList<HistoryDisplayData> history = FXCollections.observableList(
+          //      ConversationProvider.getHistory(
+            //            MainController.getUserMe().getUserID(),
+              //          mainController.getTokenService().getToken())
+       // );
 
-        historyTable.setItems(history);
+        //historyTable.setItems(history);
     }
 
     @FXML
