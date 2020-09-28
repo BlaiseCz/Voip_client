@@ -55,7 +55,7 @@
                         <TableView fx:id="usersTable" layoutX="13.0" layoutY="57.0" onKeyReleased="#updateSelectedUser" onMouseClicked="#updateSelectedUser" pickOnBounds="false" prefHeight="506.0" prefWidth="457.0" AnchorPane.bottomAnchor="235.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="328.0" AnchorPane.topAnchor="57.0">
                             <columns>
                                 <TableColumn fx:id="usernameColumn" editable="false" prefWidth="474.0" text="Nickname" />
-                                <TableColumn fx:id="statusColumn" editable="false" maxWidth="325.0" minWidth="47.0" prefWidth="91.0" />
+                                <TableColumn fx:id="statusColumn" editable="false" maxWidth="325.0" minWidth="47.0" prefWidth="91.0" text="Online" />
                                 <!--                                <TableColumn fx:id="favouriteColumn" editable="false" maxWidth="75.0" minWidth="50.0"-->
                                 <!--                                             prefWidth="50.0" text="Favourite"/>-->
                             </columns>
