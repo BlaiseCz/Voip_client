@@ -52,7 +52,7 @@ public class VoiceReceiverImpl implements VoiceReceiver {
 
                 if (Objects.nonNull(decryptor)) {
                     try {
-                        response = decryptor.decrypt(response);
+//                        response = decryptor.decrypt(response);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

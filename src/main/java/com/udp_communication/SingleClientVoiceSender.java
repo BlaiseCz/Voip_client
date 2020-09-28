@@ -52,7 +52,7 @@ public class SingleClientVoiceSender implements VoiceSender {
                 MicrophoneData microphoneData = microphone.read();
 
                 if (Objects.nonNull(encryption)) {
-                    microphoneData = encryption.encrypt(microphoneData);
+//                    microphoneData = encryption.encrypt(microphoneData);
                 }
 
                 byte[] data = microphoneData.getData();
