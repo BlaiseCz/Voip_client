@@ -47,7 +47,6 @@
                     </columnResizePolicy>
                 </TableView>
                 <Label alignment="CENTER" disable="true" font="$x1" layoutY="441.0" style="&#10;" text="History" wrapText="false" />
-                <Button fx:id="getHistoryBtn" layoutX="127.0" layoutY="446.0" mnemonicParsing="false" onAction="#refreshHistory" text="Refresh" />
           </children>
         </AnchorPane>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="798.0" prefWidth="667.0">

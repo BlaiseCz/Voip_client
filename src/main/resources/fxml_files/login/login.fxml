@@ -16,7 +16,7 @@
         <Button fx:id="loginBtn" layoutX="200.0" layoutY="444.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="400.0" text="Sign in" AnchorPane.bottomAnchor="325.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
         <Button fx:id="registerBtn" layoutX="200.0" layoutY="640.0" mnemonicParsing="false" onAction="#register" prefHeight="31.0" prefWidth="400.0" text="Sign up" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
         <CheckBox fx:id="rememberMeCB" layoutX="474.0" layoutY="487.0" mnemonicParsing="false" text="Remember me" AnchorPane.bottomAnchor="292.0" AnchorPane.rightAnchor="200.0" />
-      <Text layoutX="200.0" layoutY="628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account already?" textAlignment="CENTER" wrappingWidth="400.0" />
+      <Text layoutX="200.0" layoutY="628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account yet?" textAlignment="CENTER" wrappingWidth="400.0" />
       <Text layoutX="200.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIP - voice chat" textAlignment="CENTER" wrappingWidth="400.0">
          <font>
             <Font size="45.0" />

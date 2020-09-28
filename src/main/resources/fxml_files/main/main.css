@@ -1,10 +1,10 @@
 .menu-bar {
-    -fx-background-color: #95a5a6;
+    -fx-background-color: #b2fbbb;
     -fx-background-insets: 0, 0 0 1 0;
 }
 
 .menu-bar .menu .label {
-    -fx-text-fill: #bdc3c7;
+    -fx-text-fill: #000;
 }
 
 #mainBackground {
@@ -12,12 +12,13 @@
 }
 
 .button {
-    -fx-background-color: #34495e;
-    -fx-text-fill: #ffffff;
+    -fx-background-color: #b2fbbb;
+    -fx-border-color: #4d6a51;
+    -fx-text-fill: #000;
 }
 
 .button:hover {
-    -fx-background-color: #7f8fa6;
+    -fx-background-color: #85f292;
     -fx-scale-y: 1.05;
     -fx-scale-x: 1.05;
 }
