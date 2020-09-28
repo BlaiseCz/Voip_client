@@ -7,6 +7,8 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -50,9 +52,30 @@
         </AnchorPane>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="798.0" prefWidth="667.0">
                 <children>
-                    <Button fx:id="callBtn" layoutX="15.0" layoutY="668.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#call" text="Call" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0" />
-                    <Button fx:id="muteBtn" layoutX="108.0" layoutY="668.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#mute" text="Mute" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="108.0" />
-                    <Button fx:id="disconnectBtn" layoutX="487.0" layoutY="668.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#disconnect" text="Disconnect" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="487.0" />
+                    <Button fx:id="callBtn" layoutX="15.0" layoutY="668.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#call" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0">
+                     <graphic>
+                        <ImageView fitHeight="68.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@call.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                    <Button fx:id="muteBtn" layoutX="108.0" layoutY="668.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#mute" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="108.0">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@mute.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                    <Button fx:id="disconnectBtn" graphicTextGap="0.0" layoutX="487.0" layoutY="668.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#disconnect" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="487.0">
+                     <graphic>
+                        <ImageView fitHeight="58.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@disconnect.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                     <Label layoutX="8.0" layoutY="14.0" text="Selected User:" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="14.0">
                      <font>
                         <Font size="20.0" />

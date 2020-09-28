@@ -59,7 +59,7 @@ public class GuiRunner extends Application {
 
         component = loader.getController();
 
-        primaryStage.setTitle("Voip Caller");
+        primaryStage.setTitle("TIP VoIP");
         primaryStage.setScene(new Scene(root, 800, 800));
 
         URL iconFile = ResourceUtils.getURL("src/main/resources/icons/telephone.png");
