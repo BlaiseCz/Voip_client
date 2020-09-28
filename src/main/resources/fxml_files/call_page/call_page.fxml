@@ -79,7 +79,7 @@
                                 <Font size="25.0" fx:id="x1" />
                             </font>
                         </Label>
-                <Label alignment="CENTER" disable="true" layoutX="489.0" layoutY="21.0" prefHeight="36.0" prefWidth="296.0" style="&#10;" text="Call history" wrapText="false">
+                <Label alignment="CENTER" disable="true" layoutX="660.0" layoutY="21.0" prefHeight="36.0" prefWidth="125.0" style="&#10;" text="Call history" wrapText="false">
                      <font>
                         <Font size="25.0" fx:id="x2" />
                      </font></Label>
