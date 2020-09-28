@@ -16,7 +16,7 @@
         <TextField fx:id="emailTF" layoutX="200.0" layoutY="436.0" promptText="E-mail address" AnchorPane.bottomAnchor="333.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
         <PasswordField fx:id="passwordTF" layoutX="200.0" layoutY="477.0" promptText="Password" AnchorPane.bottomAnchor="292.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
         <Button fx:id="registerBtn" layoutX="200.0" layoutY="640.0" mnemonicParsing="false" onAction="#register" prefHeight="31.0" prefWidth="400.0" text="Sign up" AnchorPane.bottomAnchor="129.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
-        <Button fx:id="loginBtn" layoutX="37.0" layoutY="35.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="173.0" text="Back" AnchorPane.bottomAnchor="734.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="590.0">
+        <Button fx:id="loginBtn" layoutX="37.0" layoutY="45.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="173.0" text="Back" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="590.0">
          <graphic>
             <ImageView fitHeight="35.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
                <image>

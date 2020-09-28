@@ -2,7 +2,6 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -24,9 +23,9 @@
                                 <Font size="25.0" fx:id="x1" />
                             </font>
                         </Label>
-                        <TableView fx:id="usersTable" layoutX="-17.0" layoutY="47.0" onKeyReleased="#updateSelectedUser" onMouseClicked="#updateSelectedUser" pickOnBounds="false" prefHeight="365.0" prefWidth="189.0" AnchorPane.bottomAnchor="383.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                        <TableView fx:id="usersTable" layoutX="-17.0" layoutY="47.0" onKeyReleased="#updateSelectedUser" onMouseClicked="#updateSelectedUser" pickOnBounds="false" prefHeight="365.0" prefWidth="197.0" AnchorPane.bottomAnchor="383.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                             <columns>
-                                <TableColumn fx:id="usernameColumn" editable="false" prefWidth="131.0" />
+                                <TableColumn fx:id="usernameColumn" editable="false" prefWidth="131.0" text="User" />
                                 <TableColumn fx:id="statusColumn" editable="false" maxWidth="88.0" minWidth="47.0" prefWidth="56.0" />
                                 <!--                                <TableColumn fx:id="favouriteColumn" editable="false" maxWidth="75.0" minWidth="50.0"-->
                                 <!--                                             prefWidth="50.0" text="Favourite"/>-->
@@ -49,11 +48,11 @@
                 <Label alignment="CENTER" disable="true" font="$x1" layoutY="441.0" style="&#10;" text="History" wrapText="false" />
           </children>
         </AnchorPane>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="798.0" prefWidth="667.0">
+            <AnchorPane id="Content" prefHeight="798.0" prefWidth="206.0">
                 <children>
                     <Button fx:id="callBtn" layoutX="15.0" layoutY="668.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#call" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0">
                      <graphic>
-                        <ImageView fitHeight="68.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView id="callBtn" fitHeight="68.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@call.png" />
                            </image>
@@ -61,7 +60,7 @@
                      </graphic></Button>
                     <Button fx:id="muteBtn" layoutX="108.0" layoutY="668.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#mute" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="108.0">
                      <graphic>
-                        <ImageView fitHeight="47.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView id="muteBtn" fitHeight="47.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@mute.png" />
                            </image>
@@ -69,7 +68,7 @@
                      </graphic></Button>
                     <Button fx:id="disconnectBtn" graphicTextGap="0.0" layoutX="487.0" layoutY="668.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#disconnect" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="487.0">
                      <graphic>
-                        <ImageView fitHeight="58.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView id="disconnectBtn" fitHeight="58.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@disconnect.png" />
                            </image>
@@ -80,15 +79,11 @@
                         <Font size="20.0" />
                      </font></Label>
                     <Label fx:id="selectedUserLbl" layoutX="8.0" layoutY="46.0" text="-----" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="46.0" />
-                    <Label layoutX="169.0" layoutY="14.0" text="User IP:">
+                    <Label layoutX="188.0" layoutY="14.0" text="User IP:">
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                    <Label fx:id="userIpLbl" layoutX="169.0" layoutY="46.0" text="-----" />
-                    <CheckBox fx:id="favouriteCheckBox" contentDisplay="CENTER" layoutX="442.0" layoutY="14.0" mnemonicParsing="false" onAction="#favouriteChanged" text="Favourite">
-                     <font>
-                        <Font size="20.0" />
-                     </font></CheckBox>
+                    <Label fx:id="userIpLbl" layoutX="188.0" layoutY="46.0" text="-----" />
                 </children>
             </AnchorPane>
       </items>

@@ -12,6 +12,10 @@
     -fx-padding: 0 3 0 3;
 }
 
+#callBtn #muteBtn #disconnectBtn {
+    -fx-background-color: #ecf0f1;
+}
+
 .scroll-pane {
     -fx-background-insets: 0, 0;
     -fx-padding: 0;

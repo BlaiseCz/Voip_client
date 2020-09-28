@@ -145,7 +145,7 @@ public class CallPageController {
         selectedUser = usersTable.getSelectionModel()
                 .getSelectedItem();
 
-        favouriteCheckBox.setSelected(selectedUser.isFavourite());
+//        favouriteCheckBox.setSelected(selectedUser.isFavourite());
         updateSelectedUserInfo();
     }
 
