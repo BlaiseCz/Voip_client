@@ -26,7 +26,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                    <Button fx:id="muteBtn" layoutX="111.0" layoutY="708.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#mute" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="111.0">
+                    <Button fx:id="muteBtn" layoutX="111.0" layoutY="708.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#mute" text="Mute" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="111.0">
                      <graphic>
                         <ImageView id="muteBtn" fitHeight="47.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                            <image>

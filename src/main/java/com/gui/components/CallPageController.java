@@ -108,8 +108,8 @@ public class CallPageController {
 //        favouriteColumn.setCellValueFactory(new PropertyValueFactory("favourite"));
 
         initRefreshingUsersThread();
-        muteBtn.setDisable(true);
-        disconnectBtn.setDisable(true);
+        //muteBtn.setDisable(true);
+        //disconnectBtn.setDisable(true);
 
         new Thread(() -> {
             while(GuiRunner.isRunning()) {
@@ -153,12 +153,17 @@ public class CallPageController {
     void call(ActionEvent event) throws
                                  IOException,
                                  LineUnavailableException {
+/*        muteBtn.setDisable(false);
+        disconnectBtn.setDisable(false);
+        callBtn.setDisable(true);*/
+
+
         try {
             String[] conversationID = new String[1];
             startCall(selectedUser, conversationID, true);
 
             callerProvider.callTo(MainController.getUserMe(), selectedUser, conversationID[0]);
-            disconnectBtn.setDisable(false);
+
         } catch (Exception e) {
             this.disconnect(null);
         }
@@ -185,8 +190,9 @@ public class CallPageController {
 
         conversationUpdater.stopUpdatingAndHangUp(mainController.getTokenService().getToken());
         voiceReceiver.stopListening();
+/*        callBtn.setDisable(false);
         disconnectBtn.setDisable(true);
-        muteBtn.setDisable(true);
+        muteBtn.setDisable(true);*/
 
         refreshHistory();
     }
