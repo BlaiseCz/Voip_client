@@ -16,7 +16,7 @@ import java.util.Objects;
 
 @Component
 public class DHProvider {
-    final static String url = "127.0.0.1:8080";
+    final static String url = "https://voiptipchat.herokuapp.com";
     private static RestTemplate restTemplate = RestTemplateConfiguration.restTemplate();
 
     public static String getKeyForConversation(

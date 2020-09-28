@@ -16,7 +16,7 @@ import java.util.Objects;
 
 @Component
 public class AuthProviderImpl implements AuthProvider {
-    final String url = "127.0.0.1:8080";
+    final String url = "https://voiptipchat.herokuapp.com";
     private static UserTO user;
 
     @Getter
@@ -30,8 +30,8 @@ public class AuthProviderImpl implements AuthProvider {
 
         user = userTOResponseEntity.getBody();
         token = Objects.requireNonNull(userTOResponseEntity.getHeaders()
-                                                           .get("token"))
-                       .get(0);
+                .get("token"))
+                .get(0);
 
         MainController.setUserMe(user.map());
         return userTOResponseEntity.getBody();
@@ -39,6 +39,7 @@ public class AuthProviderImpl implements AuthProvider {
 
     public UserTO register(RegistrationForm registerForm) {
         String endpointUrl = url + "/auth/register";
+        System.out.println(registerForm.getIPAddress());
         return restTemplate.postForObject(endpointUrl, registerForm, UserTO.class);
     }
 
@@ -47,7 +48,7 @@ public class AuthProviderImpl implements AuthProvider {
         String endpointUrl = url + "/auth/renewToken";
 
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(endpointUrl)
-                                                           .queryParam("userID", user.getUserID());
+                .queryParam("userID", user.getUserID());
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("token", actualToken);
